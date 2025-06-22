@@ -1,3 +1,9 @@
+/**
+ *
+ * @param {Array} podcasts - The podcasts that need to be shown
+ * @param {HTMLElement} container - Where to place the podcast blocks
+ * @param {Array} genres - The list of genres to get names from
+ */
 export function renderPodcastList(podcasts, container, genres) {
   container.innerHTML = "";
   const template = document.getElementById("podcast-template");
@@ -18,6 +24,8 @@ export function renderPodcastList(podcasts, container, genres) {
     $(".podcast-updated").textContent = `Last updated: ${new Date(
       podcast.updated
     ).toLocaleDateString()}`;
+
+    clone.querySelector(".podcast-block").dataset.id = podcast.id;
 
     container.appendChild(clone);
   });
