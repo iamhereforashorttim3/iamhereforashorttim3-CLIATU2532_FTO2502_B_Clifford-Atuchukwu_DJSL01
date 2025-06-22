@@ -3,10 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Podcast Title</title>
+    <link href="styles.css" rel="stylesheet" />
   </head>
-  <html>
-  <link href = "styles.css" rel="stylesheet"></link>
   <body>
+    <header class="the-header">
+      <h1>This is a podcast demo title</h1>
+
+      <div class="filter-buttons">
+        <h5>Filter by:</h5>
+        <select class="genre-dropdown">
+          <option>All Genres</option>
+          <option>Genre 1</option>
+          <option>Genre 2</option>
+          <option>Genre 3</option>
+          <option>Genre 4</option>
+        </select>
+
+        <select class="updated-time">
+          <option>Recently Updated</option>
+          <option>Most Popular</option>
+          <option>Newest</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="podcast-list" id="podcast-list"></main>
+
+    <div class="modal hidden" id="podcast-modal">
+      <div class="modal-content">
+        <button class="close-modal" id="close-modal">&times;</button>
+        <img id="modal-cover" alt="Podcast Cover" />
+        <h1 class="podcast-title" id="modal-title">Podcast Title</h1>
+        <p class="podcast-description" id="modal-description"></p>
+        <h3>Genres:</h3>
+        <div class="genre-title" id="modal-genres"></div>
+        <p id="modal-updated"></p>
+        <h3>Seasons:</h3>
+        <ul id="modal-seasons"></ul>
+      </div>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
   </body>
 </html>
