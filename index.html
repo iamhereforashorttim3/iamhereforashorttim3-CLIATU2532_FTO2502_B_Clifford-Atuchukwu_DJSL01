@@ -32,7 +32,6 @@
 
     <div class="modal hidden" id="podcast-modal">
       <div class="modal-content">
-        <button class="close-modal" id="close-modal">&times;</button>
         <img id="modal-cover" alt="Podcast Cover" />
         <h1 class="podcast-title" id="modal-title">Podcast Title</h1>
         <p class="podcast-description" id="modal-description"></p>
@@ -44,6 +43,29 @@
       </div>
     </div>
 
-    <script type="module" src="scripts/main.js"></script>
+    <template id="podcast-template">
+      <div class="podcast-block">
+        <img src="" alt="" class="podcast-image" />
+        <h3 class="podcast-title"></h3>
+        <p class="podcast-seasons"></p>
+        <p class="podcast-genres"></p>
+        <p class="podcast-updated"></p>
+      </div>
+    </template>
+
+    <template id="podcast-modal">
+      <div class="open-modal">
+        <h3 class="podcast-title"></h3>
+        <img src="" class="podcast-image" />
+        <p class="podcast-description"></p>
+        <p class="podcast-genres"></p>
+        <p class="podcast-updated"></p>
+        <p class="podcast-seasons"></p>
+        <div class="season-episodes"></div>
+      </div>
+    </template>
+    <div id="modal-backdrop" class="modal-backdrop hidden"></div>
+
+    <script type="module" src="main.js"></script>
   </body>
 </html>
