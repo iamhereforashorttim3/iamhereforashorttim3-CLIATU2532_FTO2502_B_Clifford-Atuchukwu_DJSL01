@@ -1,4 +1,65 @@
-h1 {
-  color: blue;
-  font-size: large;
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f9f9f9;
+}
+
+.the-header {
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.podcast-list {
+  display: grid;
+  gap: 3rem;
+  padding: 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.updated-time,
+.genre-dropdown {
+  border-radius: 20px;
+}
+.podcast-block {
+  background: white;
+  border-radius: 8px;
+  padding: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.podcast-block:hover {
+  transform: scale(1.02);
+}
+
+.podcast-block img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.podcast-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+.podcast-seasons,
+.podcast-genres,
+.podcast-updated {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.2rem 0;
 }
